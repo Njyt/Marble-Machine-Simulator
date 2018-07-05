@@ -88,6 +88,7 @@ var intervalId;
 
 function Pause() {
 	clearInterval(intervalId);
+	intervalId = false;
 	marbleMachineVideo.pause();
 }
 $("#Pause_track").on('click', Pause);
@@ -98,6 +99,10 @@ var vid = document.getElementById("MM");
 
 
 function Play() {
+	if (intervalId === false) {
+		return;
+	}
+	
 	intervalId = setInterval(
 		() => {
 			const row = notes[rowIndex];
