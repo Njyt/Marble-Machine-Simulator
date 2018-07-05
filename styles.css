@@ -1,0 +1,68 @@
+
+.a,
+.b {
+    display: inline-block;
+    font-family: Futura;
+}
+
+.a {
+    width: 63px;
+    padding-left: 3px;
+    font-family: Futura;
+}
+
+.header .cell {
+    float: left;
+    font-family: Futura;
+
+}
+
+.cell {
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    clear: both;
+}
+
+.row.active .cell {
+    background: gold;
+}
+
+.cell:nth-child(4) {
+    margin-left: 20px;
+}
+
+.box {
+    display: flex;
+}
+
+.title {
+    text-align: left;
+    font-family: Futura;
+    font-size: 20px;
+    position: relative;
+    top: 230px;
+
+}
+
+.sub {
+    text-align: left;
+    font-family: Futura;
+    font-size: 10px;
+    flex-direction: column;
+
+
+}
+
+.video {
+    position: sticky;
+}
+
+.row-num {
+    width: 40px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.2.0/Tone.min.js"></script>
+
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<div class="box">
+		<div class="title">
+			<p>
+				<b> Marble Machine Simulator </b>
+			</p>
+			<div class="sub">
+				<p>Inspired by
+					<a href="http://www.wintergatan.net/#/news" target="_blank"> Wintergarten</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="video">
+			<video id="marbleMachineVideo" muted="" loop>
+				<source src="./samples/MM.mp4" type="video/mp4">
+			</video>
+		</div>
+
+		<div>
+			<div>
+				<p>
+					<div class="sub">Track Length:</div>
+					<input type="number" id="RowNum" name="Row_Number" class="row-num">
+
+					<button id="change-button">Change</button>
+
+					<p>
+						<button id="Play_track">Play</button>
+						<button id="Pause_track">Pause</button>
+						<button id="Go_To_Top">Stop</button>
+						<button id="Reset">Clear</button>
+							
+						<div class="a">
+							<b>Drums</b>
+						</div>
+						<div class="b">
+							<b>Vibraphone</b>
+						</div>
+			</div>
+			<div class="header">
+				<div class="cell">K</div>
+				<div class="cell">S</div>
+				<div class="cell">C</div>
+				<div class="cell">G</div>
+				<div class="cell">A</div>
+				<div class="cell">B</div>
+				<div class="cell">C</div>
+				<div class="cell">D</div>
+				<div class="cell">E</div>
+				<div class="cell">F</div>
+			</div>
+			<div id="wrapper"></div>
+		</div>
+	</div>
+
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
