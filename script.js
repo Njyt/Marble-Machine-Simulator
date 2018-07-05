@@ -83,7 +83,7 @@ for (var i = 0; i < numRows; i++) {
 }
 
 let rowIndex = 0;
-var intervalId;
+var intervalId = false;
 
 
 function Pause() {
@@ -99,10 +99,10 @@ var vid = document.getElementById("MM");
 
 
 function Play() {
-	if (intervalId === false) {
+	if (intervalId !== false) {
 		return;
 	}
-	
+
 	intervalId = setInterval(
 		() => {
 			const row = notes[rowIndex];
