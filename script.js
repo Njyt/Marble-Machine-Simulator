@@ -18,40 +18,19 @@ const sample2 = new Tone.Player({
 const sample3 = new Tone.Player({
 	url: './samples/C.wav',
 }).toMaster();
-const sample4 = new Tone.Player({
-	url: './samples/1.wav',
-	loop: false,
-	retrigger: true
-}).toMaster();
-const sample5 = new Tone.Player({
-	url: './samples/2.wav',
-	loop: false,
-	retrigger: true
-}).toMaster();
-const sample6 = new Tone.Player({
-	url: './samples/3.wav',
-	loop: false,
-	retrigger: true
-}).toMaster();
-const sample7 = new Tone.Player({
-	url: './samples/4.wav',
-	loop: false,
-	retrigger: true
-}).toMaster();
-const sample8 = new Tone.Player({
-	url: './samples/5.wav',
-	loop: false,
-	retrigger: true
-}).toMaster();
-const sample9 = new Tone.Player({
-	url: './samples/6.wav',
-	loop: false,
-	retrigger: true
-}).toMaster();
-const sample10 = new Tone.Player({
-	url: './samples/7.wav',
-	loop: false,
-	retrigger: true
+
+
+var vibraphone = new Tone.Sampler({
+	'G3' : '1.wav',
+	'A3' : '2.wav',
+	'B3' : '3.wav',
+	'C3' : '4.wav',
+	'D3' : '5.wav',
+	'E3' : '6.wav',
+	'F3' : '7.wav'
+}, {
+	'release' : 1,
+	'baseUrl' : './samples/'
 }).toMaster();
 
 function makeCheckbox($row, i, j) {
@@ -121,25 +100,25 @@ function Play() {
 				sample3.start();
 			}
 			if (row[3] === 1) {
-				sample4.start();
+				vibraphone.triggerAttack('G3');
 			}
 			if (row[4] === 1) {
-				sample5.start();
+				vibraphone.triggerAttack('A3');
 			}
 			if (row[5] === 1) {
-				sample6.start();
+				vibraphone.triggerAttack('B3');
 			}
 			if (row[6] === 1) {
-				sample7.start();
+				vibraphone.triggerAttack('C3');
 			}
 			if (row[7] === 1) {
-				sample8.start();
+				vibraphone.triggerAttack('D3');
 			}
 			if (row[8] === 1) {
-				sample9.start();
+				vibraphone.triggerAttack('E3');
 			}
 			if (row[9] === 1) {
-				sample10.start();
+				vibraphone.triggerAttack('F3');
 			}
 			rowIndex = (rowIndex + 1) % notes.length;
 		},
