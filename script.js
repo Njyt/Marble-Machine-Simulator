@@ -52,7 +52,7 @@ const sample10 = new Tone.Player({
 	url: './samples/7.wav',
 	loop: false,
 	retrigger: true
-});
+}).toMaster();
 
 function makeCheckbox($row, i, j) {
 	const $input = $('<div class="cell"><input type="checkbox"></div>');
@@ -131,6 +131,15 @@ function Play() {
 			}
 			if (row[6] === 1) {
 				sample7.start();
+			}
+			if (row[7] === 1) {
+				sample8.start();
+			}
+			if (row[8] === 1) {
+				sample9.start();
+			}
+			if (row[9] === 1) {
+				sample10.start();
 			}
 			rowIndex = (rowIndex + 1) % notes.length;
 		},
